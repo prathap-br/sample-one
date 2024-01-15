@@ -6,6 +6,8 @@ app.get("/", (req, res) => {
   res.send("beanstalk working");
 });
 
-app.listen(80, () => {
+const port = process.env.port ||8080
+
+app.listen(port, () => {
   console.log(`app listen on 8080`);
 });
